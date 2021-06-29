@@ -9,7 +9,7 @@
         
     
 }
-/*На разных браузерах почему по разному траэктория луны,с одной стороны заходит,со второй нет*/
+/*На разных браузерах почему то по разному траэктория луны,с одной стороны заходит,со второй нет*/
 @keyframes planet{
     0%{ 
         transform: rotate(0)} 
@@ -25,6 +25,11 @@ body{
     margin-right: auto;
 
 }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .land{
     border-radius: 50%;
@@ -33,7 +38,7 @@ body{
     animation-duration: 25s;
     animation-iteration-count: infinite;
     top: 300px;
-    right: 150px;
+   
     animation-timing-function: linear;
     position: relative;
     z-index: 1;
