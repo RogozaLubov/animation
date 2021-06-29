@@ -1,7 +1,53 @@
-div {
-   margin-left: auto;
-   margin-right: auto;
-   align-items: center;
-   width: 1100;
-   height: 200px;
+@keyframes world{
+    0%{ width: 72px; } 
+    24%{z-index: 0;}
+    25%{top: 600 px; z-index: 2;}
+    50%{ width: 130px;}
+    70%{z-index: 2 ;}
+    75%{ top:500px; left: 500px; z-index:0;}
+    100%{ width: 72px; transform: rotate(360deg)}
+        
+    
+}
+/*На разных браузерах почему по разному траэктория луны,с одной стороны заходит,со второй нет*/
+@keyframes planet{
+    0%{ 
+        transform: rotate(0)} 
+    100%{
+         transform: rotate(360deg)}
+}
+body{
+    background: url(img/cosmo.png);
+    background-size: cover;
+    height:100%;
+    width: 1em;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.land{
+    border-radius: 50%;
+    width: 300px;
+    animation-name: planet;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    top: 300px;
+    right: 150px;
+    animation-timing-function: linear;
+    position: relative;
+    z-index: 1;
+  
+}
+.moon{
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    animation-name: world;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    width: 300px;
+    top: 200px;
+    left: 900px;
+    animation-timing-function: linear;
 }
